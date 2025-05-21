@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex - Council</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a1a;
+            color: #4a9eff;
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-shadow: 0 0 10px #4a9eff,
+                         0 0 20px #4a9eff,
+                         0 0 30px #4a9eff;
+            animation: neonPulse 1.5s ease-in-out infinite alternate;
+        }
+
+        .home-button {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            color: #4a9eff;
+            text-decoration: none;
+            text-shadow: 0 0 10px #4a9eff,
+                         0 0 20px #4a9eff;
+            transition: all 0.3s ease;
+        }
+
+        .home-button:hover {
+            text-shadow: 0 0 15px #4a9eff,
+                         0 0 30px #4a9eff,
+                         0 0 45px #4a9eff;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 10px #4a9eff,
+                         0 0 20px #4a9eff;
+            animation: neonPulse 2s ease-in-out infinite alternate;
+        }
+
+        .profile {
+            background: rgba(74, 158, 255, 0.1);
+            border: 2px solid #4a9eff;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 0 20px rgba(74, 158, 255, 0.2);
+        }
+
+        .profile h2 {
+            color: #4a9eff;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px #4a9eff;
+        }
+
+        .profile p {
+            margin: 0.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        @keyframes neonPulse {
+            from {
+                text-shadow: 0 0 10px #4a9eff,
+                            0 0 20px #4a9eff,
+                            0 0 30px #4a9eff;
+            }
+            to {
+                text-shadow: 0 0 20px #4a9eff,
+                            0 0 30px #4a9eff,
+                            0 0 40px #4a9eff,
+                            0 0 50px #4a9eff;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">Complex</div>
+    <a href="index.html" class="home-button">Back to Home</a>
+    <div class="content">
+        <h1 class="title">View Our Profiles</h1>
+        <div class="profile">
+            <h2>Joey Dane</h2>
+            <p>Role: Developer</p>
+            <p>Council and Web Dev</p>
+            <p>Age: 13</p>
+            <p>Producer of Complex Studios</p>
+        </div>
+    </div>
+</body>
+</html> 
