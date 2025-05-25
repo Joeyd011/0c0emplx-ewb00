@@ -58,10 +58,18 @@
             left: 50%;
             transform: translate(-50%, -50%);
             display: flex;
+            flex-direction: column;
             align-items: center;
             gap: 2rem;
             width: 90%;
             max-width: 1200px;
+        }
+
+        .content-row {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            width: 100%;
         }
 
         .announcement {
@@ -111,6 +119,64 @@
                          0 0 45px #4a9eff;
         }
 
+        .wiki-box {
+            position: relative;
+            padding: 2rem 3rem;
+            background: transparent;
+            border: none;
+            margin-top: 1rem;
+        }
+
+        .wiki-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: transparent;
+            border: 2px solid #4a9eff;
+            border-radius: 8px;
+            box-shadow: 
+                0 0 10px #4a9eff,
+                0 0 20px #4a9eff,
+                inset 0 0 10px rgba(74, 158, 255, 0.1);
+            animation: borderPulse 2s ease-in-out infinite alternate;
+        }
+
+        .wiki-box::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            background: transparent;
+            border: 1px solid #4a9eff;
+            border-radius: 4px;
+            opacity: 0.6;
+            animation: borderPulse 2s ease-in-out infinite alternate-reverse;
+        }
+
+        .wiki-box a {
+            position: relative;
+            z-index: 2;
+            font-size: 2.2rem;
+            color: #4a9eff;
+            text-decoration: none;
+            text-shadow: 0 0 10px #4a9eff,
+                         0 0 20px #4a9eff;
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .wiki-box a:hover {
+            text-shadow: 0 0 15px #4a9eff,
+                         0 0 30px #4a9eff,
+                         0 0 45px #4a9eff;
+            transform: scale(1.05);
+        }
+
         @keyframes glowPulse {
             from {
                 opacity: 0.5;
@@ -131,6 +197,22 @@
                             0 0 30px #4a9eff,
                             0 0 40px #4a9eff,
                             0 0 50px #4a9eff;
+            }
+        }
+
+        @keyframes borderPulse {
+            from {
+                box-shadow: 
+                    0 0 10px #4a9eff,
+                    0 0 20px #4a9eff,
+                    inset 0 0 10px rgba(74, 158, 255, 0.1);
+            }
+            to {
+                box-shadow: 
+                    0 0 20px #4a9eff,
+                    0 0 30px #4a9eff,
+                    0 0 40px #4a9eff,
+                    inset 0 0 20px rgba(74, 158, 255, 0.2);
             }
         }
     </style>
@@ -156,14 +238,18 @@
 <body>
     <div class="logo">Complex</div>
     <div class="top-links">
-        <a href="council.html" class="council-link">Our Council</a>
         <a href="careers.html" class="council-link">careers</a>
     </div>
     <div class="main-content">
-        <div class="announcement">Last warrior releasing JUNE 13th!! yay</div>
-        <div class="divider"></div>
-        <div class="article-box">
-            <a href="article001.html">New article!!<br><strong>Welcome Last Warrior</strong></a>
+        <div class="content-row">
+            <div class="announcement">Last warrior releasing JUNE 13th!! yay</div>
+            <div class="divider"></div>
+            <div class="article-box">
+                <a href="article001.html">New article!!<br><strong>Welcome Last Warrior</strong></a>
+            </div>
+        </div>
+        <div class="wiki-box">
+            <a href="wiki101.html">Last warrior wiki</a>
         </div>
     </div>
 </body>
