@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Last Warrior Wiki - Complex</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a1a;
+            color: #4a9eff;
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 26, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #4a9eff;
+            box-shadow: 0 2px 20px rgba(74, 158, 255, 0.3);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 0 0 10px #4a9eff,
+                         0 0 20px #4a9eff;
+            animation: neonPulse 2s ease-in-out infinite alternate;
+        }
+
+        .home-link {
+            font-size: 1.2rem;
+            color: #4a9eff;
+            text-decoration: none;
+            text-shadow: 0 0 10px #4a9eff;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border: 1px solid #4a9eff;
+            border-radius: 4px;
+        }
+
+        .home-link:hover {
+            text-shadow: 0 0 15px #4a9eff,
+                         0 0 30px #4a9eff;
+            box-shadow: 0 0 15px rgba(74, 158, 255, 0.5);
+            background: rgba(74, 158, 255, 0.1);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 120px 2rem 2rem;
+        }
+
+        .wiki-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            border: 2px solid #4a9eff;
+            border-radius: 8px;
+            background: rgba(74, 158, 255, 0.05);
+            box-shadow: 0 0 20px rgba(74, 158, 255, 0.2);
+        }
+
+        .wiki-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 15px #4a9eff,
+                         0 0 30px #4a9eff;
+            animation: neonPulse 3s ease-in-out infinite alternate;
+        }
+
+        .wiki-meta {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .meta-item {
+            padding: 0.5rem;
+            border-left: 3px solid #4a9eff;
+            background: rgba(74, 158, 255, 0.1);
+        }
+
+        .meta-label {
+            font-weight: bold;
+            color: #66b3ff;
+        }
+
+        .wiki-content {
+            background: rgba(74, 158, 255, 0.05);
+            border: 1px solid #4a9eff;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 0 15px rgba(74, 158, 255, 0.1);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #66b3ff;
+            text-shadow: 0 0 10px #4a9eff;
+            border-bottom: 2px solid #4a9eff;
+            padding-bottom: 0.5rem;
+        }
+
+        .content-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            text-align: justify;
+            color: #b3d9ff;
+        }
+
+        .highlight {
+            color: #4a9eff;
+            font-weight: bold;
+            text-shadow: 0 0 5px #4a9eff;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: rgba(74, 158, 255, 0.1);
+            border: 1px solid #4a9eff;
+            border-radius: 6px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 0 20px rgba(74, 158, 255, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #66b3ff;
+            margin-bottom: 0.5rem;
+        }
+
+        @keyframes neonPulse {
+            from {
+                text-shadow: 0 0 10px #4a9eff,
+                            0 0 20px #4a9eff;
+            }
+            to {
+                text-shadow: 0 0 20px #4a9eff,
+                            0 0 30px #4a9eff,
+                            0 0 40px #4a9eff;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .wiki-meta {
+                grid-template-columns: 1fr;
+            }
+            
+            .wiki-title {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 100px 1rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Complex Wiki</div>
+        <a href="index.html" class="home-link">Go home</a>
+    </div>
+
+    <div class="container">
+        <div class="wiki-header">
+            <h1 class="wiki-title">Welcome Last Warrior</h1>
+            <div class="wiki-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Creator:</span> Mr JoeyD
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Date Created:</span> May 25th 2025
+                </div>
+            </div>
+        </div>
+
+        <div class="wiki-content">
+            <h2 class="section-title">Game Overview</h2>
+            <p class="content-text">
+                <span class="highlight">Last Warrior</span> is an upcoming game on Roblox coming this Summer! This game upholds battles with others, cool weapons, weekly updates, and more! Wanna battle others? Go ahead! Wanna use coins to buy powers or fruits to help you? Welcome yourself in soon!!
+            </p>
+        </div>
+
+        <div class="wiki-content">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-title">Epic Battles</div>
+                    <p>Engage in intense combat with other players in dynamic battle arenas</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-title">Cool Weapons</div>
+                    <p>Discover and wield a variety of powerful weapons to dominate your enemies</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-title">Powers & Fruits</div>
+                    <p>Use coins to purchase special powers and fruits that enhance your abilities</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-title">Weekly Updates</div>
+                    <p>Fresh content and improvements delivered every week to keep the game exciting</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="wiki-content">
+            <h2 class="section-title">Getting Started</h2>
+            <p class="content-text">
+                Ready to become the <span class="highlight">Last Warrior</span>? Join the battle this Summer and prove your worth in combat! Collect coins, upgrade your arsenal, and climb the ranks to become the ultimate warrior. The battlefield awaits your arrival!
+            </p>
+        </div>
+    </div>
+</body>
+</html>
